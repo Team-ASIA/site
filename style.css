@@ -125,7 +125,7 @@ main{ padding-bottom: 20px; }
 
 /* Googleフォーム埋め込み用 */
 .form-container {
-  max-width: 900px;   /* 最大幅（PCでの見栄え） */
+  max-width: 500px;   /* 最大幅（PCでの見栄え） */
   margin: 0;          /* 左寄せにする */
   padding: 20px 0 20px 20px; /* 左に余白ちょっと足すと見やすい */
 }
