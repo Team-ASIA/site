@@ -1,0 +1,90 @@
+/* 全体：Members */
+#members {
+  display: flex;
+  flex-direction: column;   /* 縦に積む */
+  align-items: flex-start;  /* 左揃え */
+  gap: 18px;                /* 間隔 */
+  margin: 40px 0;
+}
+
+/* 1人分：横並び（画像＋名前） */
+.member {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0;
+}
+
+/* 丸い画像（共通処理） */
+.member img {
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 名前 */
+.member-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ===== Members 詳細プロフィール ===== */
+.profile {
+  display: flex;               /* 画像とテキストを横並び */
+  align-items: flex-start;     /* 上揃え */
+  gap: 20px;                   /* 画像とテキストの間隔 */
+  margin: 25px 0;              /* 各プロフィールの上下余白 */
+  padding: 15px;
+  border: 2px solid transparent; /* 枠線は透明（必要なら色に変えてOK） */
+  border-radius: 12px;         /* 角丸 */
+  background-color: transparent; /* 背景は透明に */
+  color: inherit;              /* 文字色は親要素に従う */
+}
+
+/* 画像 */
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* プロフィール内のテキスト */
+.profile h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.4rem;
+  color: #ffd700;              /* 名前は金色っぽく強調 */
+}
+
+.profile p {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+/* 「説明」小見出し */
+.profile h4 {
+  margin: 10px 0 4px;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* フォンクッキーのリンク */
+.profile .fonku_youtubelink {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 6px 12px;
+  background: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.profile .fonku_youtubelink:hover {
+  background: #cc0000;
+}
