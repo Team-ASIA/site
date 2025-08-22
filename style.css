@@ -137,3 +137,15 @@ main{ padding-bottom: 20px; }
   border-radius: 8px;
   background: transparent;
 }
+
+.news-banner .news-banner_ {
+  background: yellow;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.news-banner a {
+  color: blue;
+  text-decoration: underline;
+}

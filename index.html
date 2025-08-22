@@ -21,6 +21,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#members">Members</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="news.html">News</a></li>
     </ul>
   </nav>
 
@@ -42,6 +43,13 @@
     <!-- ナビゲーションメンバー用 -->
     <p style="font-size:1px; color:transparent;" id="members">.</p>
 
+    <section class="news-banner">
+  <p class="news-banner_">
+    📰 新しく <a href="news.html">ニュースページ</a> を公開しました！
+  </p>
+</section>
+
+
 <h2>Members</h2>
 
 <!-- tomo_fioco2 -->
@@ -49,8 +57,9 @@
   <img src="members-logo/tomo_fioco2.jpg" alt="tomo_fioco2">
   <div>
     <h2>tomo_fioco2 （リーダー）</h2>
-    <p>得意分野：バトロワ / レースゲーム / TikTokでも活動中！</p>
+    <p>得意分野：バトロワ＆リロード / レースゲーム / TikTokでも活動中！</p>
     <h4>説明</h4>
+    <a href="https://www.tiktok.com/@tomokmtej6w" class="tomofioco2_tiktoklink">フォローしてね！！！</a>
     <p>Coming Soon...</p>
   </div>
 </section>
@@ -60,7 +69,7 @@
   <img src="members-logo/twitchy-robot5.jpg" alt="twitchy-robot5">
   <div>
     <h2>twitchy-robot5</h2>
-    <p>得意分野：しらん！</p>
+    <p>得意分野：クリイティブ</p>
     <h4>説明</h4>
     <p>Coming Soon...</p>
   </div>
@@ -71,8 +80,9 @@
   <img src="members-logo/taitobanana.jpg" alt="たいとばなな">
   <div>
     <h2>たいとばなな</h2>
-    <p>得意分野：しらん！</p>
+    <p>得意分野：建築</p>
     <h4>説明</h4>
+    <a href="https://www.youtube.com/@Asia_ばなな" class="taitobanana_youtubelink">チャンネル登録してね！！！</a>
     <p>Coming Soon...</p>
   </div>
 </section>
@@ -111,7 +121,7 @@
 
       <!-- メンバー説明用フォーム -->
 <section id="member-form">
-  <h2>メンバー専用フォーム</h2>
+  <h2>説明欄変更フォーム</h2>
   <p>ここから各自で説明欄を入力してください。</p>
   
   <div class="form-container">
@@ -125,11 +135,45 @@
 
 
   </main>
-
-  <!-- 上へボタン（JSで自動生成もするけど置いておく） -->
+  <footer class="copylight">©️2025 fonku</footer>
+  </body>
+  
+  
   <button id="backToTop" title="上へ" aria-label="Back to top">▲</button>
 
-  <br />
-  <footer class="copylight">©️2025 fonku</footer>
-</body>
+<style>
+  #backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,235,59,0.6);
+    color: #000;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(2px); /* ← 修正済み */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background: #007799;
+    color: #fff;
+}
+
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+</style>
+
+<script></script>
 </html>

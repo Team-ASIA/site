@@ -73,8 +73,10 @@
   color: #aaa;
 }
 
-/* フォンクッキーのリンク */
-.profile .fonku_youtubelink {
+/* 共通デザイン */  
+.profile .fonku_youtubelink,
+.profile .tomofioco2_tiktoklink,
+.profile .taitobanana_youtubelink {
   display: inline-block;
   margin-top: 5px;
   padding: 6px 12px;
@@ -85,6 +87,9 @@
   font-weight: bold;
 }
 
-.profile .fonku_youtubelink:hover {
+/* ホバー時 */
+.profile .fonku_youtubelink:hover,
+.profile .tomofioco2_tiktoklink:hover,
+.profile .taitobanana_youtubelink:hover {
   background: #cc0000;
 }

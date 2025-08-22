@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Team ASIA - News</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 20px;
+                background: #111;
+                color: #fff;
+            }
+
+            .news-article {
+                background: #222;
+                padding: 15px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+            }
+
+            .news-article h2 {
+                margin: 0 0 10px;
+                font-size: 1.4rem;
+                color: #ffcc00;
+            }
+
+            .news-article p {
+                line-height: 1.6;
+            }
+
+            .date {
+                font-size: 0.8rem;
+                color: #aaa;
+                margin-bottom: 8px;
+                display: block;
+            }
+            
+            nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+footer.copylight{
+  display: block;          /* flex等の影響を受けない */
+  text-align: right;       /* 右寄せ */
+  padding: 12px 16px;      /* 余白を確保 */
+  font-size: 0.95rem;      /* 小さ過ぎたらここで調整（例 0.95rem ≒ 15px） */
+  color: #fff;
+  margin-top: 40px;        /* 上のコンテンツと間隔 */
+}
+
+        </style>
+    </head>
+    <body>
+
+        <nav>
+            <li><a href="index.html">Home</a></li>
+        </nav>
+        <h1>News</h1>
+
+        <div class="news-article">
+            <span class="date">2025-05-20</span>
+            <h2>Team ASIA作成！</h2>
+            <p>Team ASIAを本日作成いたしました。@tomo_fioco2</p>
+        </div>
+
+        <div class="news-article">
+            <span class="date">2025-08-20</span>
+            <h2>TeamASIAの公式サイトを作成！</h2>
+            <p>3ヶ月記念、、、、違います。ただの奇跡ですｗ</p>
+        </div>
+
+        <div class="news-article">
+            <span class="date">2025-08-22</span>
+            <h2>公式サイトにニュース昨日を追加しました！</h2>
+            <p>今見ているのがニュースです！！！頑張ったよ。ｗ</p>
+        </div>
+
+        <footer class="copylight">©️2025 fonku</footer>
+    </body>
+
+
+<!-- backToTop -->
+    <button id="backToTop">▲</button>
+    <style>
+        #backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,235,59,0.6);
+    color: #000;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(2px); /* ← 修正済み */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background: #007799;
+    color: #fff;
+}
+
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+    </style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  // 1) 既存ボタンがなければ作る
+  let btn = document.getElementById("backToTop");
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.id = "backToTop";
+    btn.title = "上へ";
+    btn.setAttribute("aria-label", "Back to top");
+    btn.textContent = "▲"; // 上矢印
+    document.body.appendChild(btn);
+  }
+
+  // 2) 表示/非表示を切り替える関数
+  const toggleBtn = () => {
+    if (window.scrollY > 1) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  };
+
+  // 3) 初期判定＋スクロール監視
+  toggleBtn();
+  window.addEventListener("scroll", toggleBtn, { passive: true });
+
+  // 4) クリックでトップへ
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+</script>
+</html>
