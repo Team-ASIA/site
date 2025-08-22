@@ -64,6 +64,10 @@ footer.copylight{
   margin-top: 40px;        /* 上のコンテンツと間隔 */
 }
 
+#sort-new,#sort-old {
+    background-color:rgb(120, 255, 255)
+}
+
         </style>
     </head>
     <body>
@@ -71,8 +75,16 @@ footer.copylight{
         <nav>
             <li><a href="index.html">Home</a></li>
         </nav>
-        <h1>News</h1>
+<br>
 
+        <div class="sort-buttons">
+            <button id="sort-new">新しい順</button>
+            <button id="sort-old">古い順</button>
+        </div>
+
+        
+        <h1>News</h1>
+        <div id="articles-container">
         <div class="news-article">
             <span class="date">2025-05-20</span>
             <h2>Team ASIA作成！</h2>
@@ -96,7 +108,7 @@ footer.copylight{
             <h2>たいとばななの友達の名前が決まりました！</h2>
             <p>名前は「やはなKUN」です！！！</p>
         </div>
-
+        </div>
         <script>
   const container = document.body; // news-articleがある親要素
   const articles = Array.from(document.querySelectorAll(".news-article"));
@@ -117,13 +129,7 @@ footer.copylight{
   document.getElementById("sort-old").addEventListener("click", () => sortArticles("old"));
 </script>
 
-
-        <div class="sort-buttons">
-            <button id="sort-new">新しい順</button>
-            <button id="sort-old">古い順</button>
-        </div>
-
-        <footer class="copylight">©️2025 fonku</footer>
+        
     </body>
 
 
@@ -194,4 +200,5 @@ footer.copylight{
   });
 });
 </script>
+<footer class="copylight">©️2025 fonku</footer>
 </html>
