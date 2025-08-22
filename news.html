@@ -82,13 +82,32 @@ footer.copylight{
         <div class="news-article">
             <span class="date">2025-08-20</span>
             <h2>TeamASIAの公式サイトを作成！</h2>
-            <p>3ヶ月記念、、、、違います。ただの奇跡ですｗ</p>
+            <p>3ヶ月記念、、、、違います。ただの偶然ですｗ</p>
         </div>
 
+        <!-- ソート切り替えボタン -->
         <div class="news-article">
             <span class="date">2025-08-22</span>
-            <h2>公式サイトにニュース昨日を追加しました！</h2>
+            <h2>公式サイトにニュース機能を追加しました！</h2>
             <p>今見ているのがニュースです！！！頑張ったよ。ｗ</p>
+        </div>
+
+        <script>
+            const conainer = document.body;
+            const articles = Array.from(document.querySelectorAll(".news-article"));
+
+
+            function sortArticles(order) {
+                articles.sort((a, b) => {
+                    const dateA = new Date(a.querySelector(".date").textContent.trim());
+                    const dateA = new Date(b,querySelector(".date"))
+                }
+            }
+        </script>
+
+        <div class="sort-buttons">
+            <button id="sort-new">新しい順</button>
+            <button id="sort-old">古い順</button>
         </div>
 
         <footer class="copylight">©️2025 fonku</footer>
