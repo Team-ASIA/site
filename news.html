@@ -93,17 +93,25 @@ footer.copylight{
         </div>
 
         <script>
-            const conainer = document.body;
-            const articles = Array.from(document.querySelectorAll(".news-article"));
+  const container = document.body; // news-articleがある親要素
+  const articles = Array.from(document.querySelectorAll(".news-article"));
+  
+  function sortArticles(order) {
+    // 日付を取得して Date型に変換
+    articles.sort((a, b) => {
+      const dateA = new Date(a.querySelector(".date").textContent.trim());
+      const dateB = new Date(b.querySelector(".date").textContent.trim());
+      return order === "new" ? dateB - dateA : dateA - dateB;
+    });
 
+    // 並び替えを反映
+    articles.forEach(article => container.appendChild(article));
+  }
 
-            function sortArticles(order) {
-                articles.sort((a, b) => {
-                    const dateA = new Date(a.querySelector(".date").textContent.trim());
-                    const dateA = new Date(b,querySelector(".date"))
-                }
-            }
-        </script>
+  document.getElementById("sort-new").addEventListener("click", () => sortArticles("new"));
+  document.getElementById("sort-old").addEventListener("click", () => sortArticles("old"));
+</script>
+
 
         <div class="sort-buttons">
             <button id="sort-new">新しい順</button>
