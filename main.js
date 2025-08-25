@@ -28,3 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+//最終更新日
+const lastUpdate = new Date(document.lastModified);
+document.getElementById("last-update").textContent =
+`${lastUpdate.getFullYear()}年${lastUpdate.getMonth()+1}月${lastUpdate.getDate()}日`;
