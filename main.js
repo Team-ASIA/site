@@ -33,3 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
 const lastUpdate = new Date(document.lastModified);
 document.getElementById("last-update").textContent =
 `${lastUpdate.getFullYear()}年${lastUpdate.getMonth()+1}月${lastUpdate.getDate()}日`;
+
+//ハンバーガーメニュー
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const links = navLinks.querySelectorAll("a");
+
+  // ハンバーガー押したら開閉
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // 各リンク押したら閉じる
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+    });
+  });
+});

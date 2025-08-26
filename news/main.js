@@ -83,7 +83,6 @@ const container = document.body; // news-articleがある親要素
 });
 
 //フィルター
-// main.js
 document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-buttons button");
   const articles = document.querySelectorAll(".news-article");

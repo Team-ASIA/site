@@ -1,55 +1,22 @@
-h1, h2, h3, h4, p {
-    color: white;
-}
-
+/* 全体の基本 */
 body {
-    background-color: #000000;
-
-    /*画像を背景*/
+    background-color: #000;
     margin: 0;
     font-family: sans-serif;
     color: #f0f0f0;
-
-    /*背景設定*/
     background-image: url("images/background1.jpg");
 }
 
 html {
-    scroll-behavior: smooth; /*スムーズスクロール*/
+    scroll-behavior: smooth; /* スムーズスクロール */
 }
 
-#backToTop {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255,235,59,0.6);
-    color: #000;
-    font-size: 20px;
-    line-height: 48px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    backdrop-filter: blur(2px); /* ← 修正済み */
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .2s ease, transform .2s ease;
-    z-index: 1000;
+/* 見出しと本文の文字色 */
+h1, h2, h3, h4, p {
+    color: white;
 }
 
-#backToTop:hover {
-    background: #007799;
-    color: #fff;
-}
-
-#backToTop.show {
-    opacity: 1;
-    pointer-events: auto;
-}
-
+/* --- ナビゲーションバー --- */
 nav {
     background: #111;
     padding: 12px 0;
@@ -80,6 +47,91 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* PCは普通に横並び */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu-toggle {
+  display: none;
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 9999; /* 絶対最前面 */
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0af;
+    z-index: 10000;
+  }
+}
+
+
+
+/* --- BackToTop ボタン --- */
+#backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,235,59,0.6);
+    color: #000;
+    font-size: 20px;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    background: #007799;
+    color: #fff;
+}
+
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --- フッター --- */
+footer.copylight {
+    display: block;
+    text-align: right;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-top: 40px;
+}
+
+main {
+    padding-bottom: 20px;
+}
+
+/* --- チーム紹介 --- */
 header, .TeamName, .TeamNameMeaning {
     text-align: center;
 }
@@ -105,39 +157,28 @@ header, .TeamName, .TeamNameMeaning {
     margin: 20px auto;   /* 中央寄せ */
 }
 
-/* フッターの見た目と位置を明示的に固定 */
-footer.copylight{
-  display: block;          /* flex等の影響を受けない */
-  text-align: right;       /* 右寄せ */
-  padding: 12px 16px;      /* 余白を確保 */
-  font-size: 0.95rem;      /* 小さ過ぎたらここで調整（例 0.95rem ≒ 15px） */
-  color: #fff;
-  margin-top: 40px;        /* 上のコンテンツと間隔 */
-}
-
-/* ページ下が詰まって見える時の保険 */
-main{ padding-bottom: 20px; }
-
+/* --- TikTok DM 専用 --- */
 .tiktokdm {
     color: chartreuse;
     font-size: 125%;
 }
 
-/* Googleフォーム埋め込み用 */
+/* --- Googleフォーム埋め込み --- */
 .form-container {
-  max-width: 435px;   /* 最大幅（PCでの見栄え） */
-  margin: 0;          /* 左寄せにする */
-  padding: 20px 0 20px 20px; /* 左に余白ちょっと足すと見やすい */
+  max-width: 435px;
+  margin: 0;
+  padding: 20px 0 20px 20px;
 }
 
 .form-container iframe {
-  width: 95%;         /* 少し余白を残して左寄せ */
-  min-height: 1000px; /* フォームの高さ（調整してね） */
+  width: 95%;
+  min-height: 1000px;
   border: none;
   border-radius: 8px;
   background: transparent;
 }
 
+/* --- ニュースバナー --- */
 .news-banner .news-banner_ {
   background: yellow;
   color: black;
