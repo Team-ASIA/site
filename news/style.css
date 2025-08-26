@@ -91,3 +91,44 @@ footer.copylight{
     opacity: 1;
     pointer-events: auto;
 }
+
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-top: 5px;
+    background: #eee;
+    border-radius: 6px;
+    font-size: 0.8em;
+    color: #333;
+}
+.filter-buttons button {
+    margin: 5px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+.filter-buttons button:hover {
+    background: #555;
+}
+
+.news-article .date,
+.news-article .tag {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 0.9em;
+}
+
+.news-article .tag {
+    background: #eee;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.date {
+    color:#aaa;
+}

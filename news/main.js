@@ -81,3 +81,24 @@ const container = document.body; // news-articleがある親要素
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+//フィルター
+// main.js
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons = document.querySelectorAll(".filter-buttons button");
+  const articles = document.querySelectorAll(".news-article");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      articles.forEach(article => {
+        if (filter === "all" || article.dataset.tag === filter) {
+          article.style.display = "";
+        } else {
+          article.style.display = "none";
+        }
+      });
+    });
+  });
+});
