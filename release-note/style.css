@@ -1,0 +1,23 @@
+#release-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.release {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 4px solid #333;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.release h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.release ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+}
