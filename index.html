@@ -45,21 +45,15 @@
       <h3>About</h3>
       <p>私たちはTeamASIAです。ゲームを中心に活動しています。</p>
     </section>
-    <!-- ナビゲーションメンバー用 -->
-    <p style="font-size:1px; color:transparent;" id="members">.</p>
 
-    <section class="news-banner">
+        <section class="news-banner">
   <p class="news-banner_">
     📰 新しく <a href="news/news.html">ニュースページ</a> を公開しました！
   </p>
 </section>
 
-<section id="latest-news">
-  <h2>最新ニュース</h2>
-  <p>Coming Soon...</p>
-  <p>今後のアップデートをお楽しみに...</p>
-  <div id="news-list"></div>
-</section>
+    <!-- ナビゲーションメンバー用 -->
+    <p style="font-size:1px; color:transparent;" id="members">.</p>
 
 <h2>Members</h2>
 
@@ -190,4 +184,15 @@
     pointer-events: auto;
 }
 </style>
+
+<p style="text-align: right;">アクセス回数: <span id="counter">読み込み中...</span></p>
+
+<script>
+fetch("https://counterapi.dev/v1/teamasia/visits/up")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("counter").innerText = data.count;
+  });
+</script>
+
 </html>

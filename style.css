@@ -190,3 +190,9 @@ header, .TeamName, .TeamNameMeaning {
   color: blue;
   text-decoration: underline;
 }
+
+#counter {
+  font-weight: bold;
+  color: #0af;
+  font-size: 1.2rem;
+}
