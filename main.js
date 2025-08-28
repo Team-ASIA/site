@@ -52,3 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//説明欄変更フォーム
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form.setumeiranhenkou");
+  const message = document.getElementById("form-message");
+
+  if (form) {
+    form.addEventListener("submit", () => {
+      setTimeout(() => {
+        form.reset(); // 入力欄リセット
+        message.textContent = "✅ 送信が完了しました！";
+      }, 500);
+    });
+  }
+});
