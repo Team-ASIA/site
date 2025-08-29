@@ -163,11 +163,20 @@ header, .TeamName, .TeamNameMeaning {
     font-size: 125%;
 }
 
-/* 説明欄変更フォーム */
 /* フォーム全体 */
-form.setumeiranhenkou {
-  max-width: 600px;
+/* 横並び用ラッパー */
+.form-row {
+  max-width: 1200px;        /* ページ中央に2枚並べる幅 */
   margin: 20px auto;
+  display: flex;
+  gap: 24px;                 /* カード間のすき間 */
+  align-items: flex-start;
+}
+
+/* フォームのカード本体（form要素） */
+.form {
+  flex: 1;                   /* 2枚を等幅に */
+  min-width: 0;              /* オーバーフロー防止 */
   padding: 20px;
   background: #1a1a1a;
   border-radius: 8px;
@@ -175,7 +184,7 @@ form.setumeiranhenkou {
 }
 
 /* ラベル */
-.setumeiranhenkou label {
+.form label, h3 {
   display: block;
   margin-top: 15px;
   font-weight: bold;
@@ -183,8 +192,8 @@ form.setumeiranhenkou {
 }
 
 /* 入力欄 & テキストエリア */
-.setumeiranhenkou input,
-.setumeiranhenkou textarea {
+.form input,
+.form textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -193,18 +202,19 @@ form.setumeiranhenkou {
   background: #222;
   color: #fff;
   font-size: 1rem;
+  resize: none;
 }
 
-/*ホバーで青い枠*/
-.setumeiranhenkou input:focus,
-.setumeiranhenkou textarea:focus {
+/* フォーカス時の青枠 */
+.form input:focus,
+.form textarea:focus {
   outline: none;
-  border: 2px solid #0af; /*青い枠*/
-  box-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+  border: 2px solid #0af;
+  box-shadow: 0 0 8px rgba(0,170,255,0.6);
 }
 
 /* 送信ボタン */
-.setumeiranhenkou button {
+.form button {
   margin-top: 20px;
   padding: 10px 20px;
   background: #0af;
@@ -214,10 +224,24 @@ form.setumeiranhenkou {
   font-weight: bold;
   cursor: pointer;
 }
+.form button:hover { background: #08c; }
 
-.setumeiranhenkou button:hover {
-  background: #08c;
+/* 完了メッセージ */
+#form-message {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.1rem;
 }
+
+/* 画面が狭いときは縦並びに戻す */
+@media (max-width: 900px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
 
 #form-message {
   text-align: center;   /* 中央寄せ */

@@ -126,31 +126,49 @@
       <a href="https://www.tiktok.com/@tomokmtej6w" class="tiktokdm">TikTok @f0n_np7</a>
     </section>
 
-      <!-- メンバー説明用フォーム -->
-<section id="member-form">
-  <h2>説明欄変更フォーム</h2>
-  <p>ここから各自で説明欄を入力してください。</p>
+<div class="form-row">
+  <!-- 説明欄変更フォーム -->
+  <form
+    action="https://docs.google.com/forms/d/e/1FAIpQLSd7QfKdCGwNQ84d0jjdVUB0I0EBJjmXucdVEiJkA8Tc3R0M1w/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    class="form">
 
-<form  
-  action="https://docs.google.com/forms/d/e/1FAIpQLSd7QfKdCGwNQ84d0jjdVUB0I0EBJjmXucdVEiJkA8Tc3R0M1w/formResponse"
-  method="POST" 
-  target="hidden_iframe" 
-  class="setumeiranhenkou">
+  <h3>説明欄変更フォーム</h3>
+    <label>名前</label>
+    <input type="text" name="entry.311173322" required placeholder="例：フォンクッキー">
 
-  <label class="setumeiranhenkou">フォートナイトのお名前</label>
-  <input type="text" name="entry.311173322" required class="setumeiranhenkou" placeholder="例：フォンクッキー">
+    <label>説明欄に書きたいこと</label>
+    <textarea name="entry.302568787" required placeholder="例：このサイト作ってるよ！"></textarea>
 
-  <label class="setumeiranhenkou">説明欄に書きたいことを書いてください</label>
-  <textarea name="entry.302568787" required class="setumeiranhenkou" placeholder="例：このサイト作ってるよ！"></textarea>
+    <button type="submit">送信</button>
+    <p class="form-message"></p>
+  </form>
 
-  <button type="submit" class="setumeiranhenkou">送信</button>
+  <!-- ネタ提供フォーム -->
+  
+  <form
+  action="https://docs.google.com/forms/d/e/1FAIpQLSeGEpp4T8Ee5rX5Uz1Or-h5szaNu86Na2fyZyobnJqBRgIxyw/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  class="form">
+  <h3>ネタ提供フォーム</h3>
+
+  <label>名前</label>
+  <input type="text" name="entry.765666940" required placeholder="例：フォンクッキー">
+
+  <label>ここに書いてね^^</label>
+  <input type="text" name="entry.1103447676" required placeholder="例：リリースノート作ってみようぜ">
+
+  <button type="submit">送信</button>
+  <p class="form-message"></p>
 </form>
 
-<!-- 送信完了メッセージを出す場所 -->
-<p id="form-message"></p>
+</div>
 
-<!-- ページ遷移しないようにする隠しiframe -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+
 
 </section>
 

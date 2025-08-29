@@ -53,17 +53,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//説明欄変更フォーム
+//フォーム
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form.setumeiranhenkou");
-  const message = document.getElementById("form-message");
+  const forms = document.querySelectorAll("form.form");
 
-  if (form) {
-    form.addEventListener("submit", () => {
-      setTimeout(() => {
-        form.reset(); // 入力欄リセット
+  forms.forEach(form => {
+    const message = form.querySelector(".form-message");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        mode: "no-cors"
+      }).then(() => {
         message.textContent = "✅ 送信が完了しました！";
-      }, 500);
+        form.reset();
+
+        setTimeout(() => {
+          message.textContent = "";
+        }, 3000);
+      }).catch(() => {
+        message.textContent = "❌ エラーが発生しました";
+      });
     });
-  }
+  });
 });
